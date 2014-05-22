@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+	
+	<display-name>Travel Innovation Sandbox</display-name>
+	
+	<!-- Enable Rest EASY -->
+	<context-param>
+		<param-name>resteasy.scan</param-name>
+		<param-value>false</param-value>
+	</context-param>
+ 
+	<context-param>
+		<param-name>resteasy.servlet.mapping.prefix</param-name>
+		<param-value>/sandbox</param-value>
+	</context-param>
+	
+	<listener>
+		<listener-class>
+			org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap
+		</listener-class>
+	</listener>
+	
+	<!-- Expose Sandbox -->
+	<servlet>
+		<servlet-name>sandbox</servlet-name>
+		<servlet-class>
+			org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher
+		</servlet-class>
+		<init-param>
+			<param-name>javax.ws.rs.Application</param-name>
+			<param-value>com.amadeus.inr.sandbox.SandboxWebApp</param-value>
+		</init-param>
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>sandbox</servlet-name>
+		<url-pattern>/sandbox/*</url-pattern>
+	</servlet-mapping>
+
+	<context-param>
+      <param-name>resteasy.providers</param-name>
+      <param-value>com.amadeus.inr.sandbox.hotel.shopping.v2.conf.JSONProvider, com.amadeus.inr.sandbox.hotel.shopping.v2.conf.ValidationExceptionMapper</param-value>
+	</context-param>
+</web-app>
