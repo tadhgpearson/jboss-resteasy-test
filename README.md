@@ -5,19 +5,21 @@ It gathers up all the disparate JARs representing each sandbox interface impleme
 
 Setting up
 ==========
-To setup the project you need to install SBT. See http://www.scala-sbt.org/release/docs/Getting-Started/Setup.html
-On Windows you can also install using Chocolatey, the package name is SBT.
-
-The project is preconfigured with sbt-eclipse, to build your workspace run 
-> sbt eclipse
-
-from the same folder as this readme. Then in eclipse, choose Import -> Existing Project and choose this folder.
+To setup the sandbox you need to install Maven 3.0.4 (or some compatible version) and Java 7.
+You will need to install the child project sandbox-hotel-shopping and build it first so that the pre-requisite JARs exist in your repo. 
 
 To build the jar, run
-> sbt package
+> mvn install
+
+If for some reason you get an error, it's likely that the default Amadeus settings.xml is causing the import to be ignored. This is evil but easily fixed.
+Find your settings.xml, usually `D:\<myusername>\.m2` and in the mirrorOf line, if you see something like this
+
+> <mirrorOf>*, !jcp.repository.wlm</mirrorOf>
+
+make it something like this
+
+> <mirrorOf>*, !jcp.repository.wlm, !project.local</mirrorOf>
 
 Where is everything
 ================
-The SBT project file will gather all the compiled sandbox implementations from your local Ivy repository.
-That means you have to have it running locally. It would be cool to put these all in a Maven repo some day!
 
