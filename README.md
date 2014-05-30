@@ -20,6 +20,11 @@ make it something like this
 
 > <mirrorOf>*, !jcp.repository.wlm, !project.local</mirrorOf>
 
+To setup eclipse, import the this folder as a maven project, or run
+> mvn eclipse:eclipse -Dwtpversion=2.0
+
+and then import it as an existing project
+
 Where is everything
 ================
 
