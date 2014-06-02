@@ -3,7 +3,7 @@
  * Unauthorized use and disclosure strictly forbidden.
  * @1998-2014 - Amadeus s.a.s - All Rights Reserved.
  */
-package com.amadeus.inr.sandbox.hotel.shopping.v2.conf;
+package com.amadeus.inr.sandbox.v2.conf;
 
 import java.io.IOException;
 import java.io.OutputStream;

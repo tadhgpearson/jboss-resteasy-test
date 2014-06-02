@@ -28,8 +28,8 @@
 	</servlet-mapping>
 
 	<context-param>
-		<param-name>resteasy.providers</param-name>
-		<param-value>com.amadeus.inr.sandbox.hotel.shopping.v2.conf.JSONProvider, com.amadeus.inr.sandbox.hotel.shopping.v2.conf.ValidationExceptionMapper</param-value>
+		<param-name>resteasy.providers</param-name><!--  Order is important here -->
+		<param-value>com.amadeus.inr.sandbox.v2.conf.JSONProvider, com.amadeus.inr.sandbox.v2.conf.ValidationExceptionMapper, com.amadeus.inr.sandbox.v2.conf.GeneralExceptionMapper</param-value>
 	</context-param>
 	
 </web-app>
