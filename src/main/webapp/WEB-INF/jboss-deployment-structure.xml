@@ -1,6 +1,7 @@
 <jboss-deployment-structure>
 	<deployment>
 		<exclusions>
+			<!-- Exclude resteasy -->
 			<module name="org.jboss.resteasy.resteasy-atom-provider" />
 			<module name="org.jboss.resteasy.resteasy-cdi" />
 			<module name="org.jboss.resteasy.resteasy-jaxrs" />
@@ -12,6 +13,9 @@
 			<module name="org.jboss.resteasy.resteasy-jsapi" />
 			<module name="org.jboss.resteasy.resteasy-multipart-provider" />
 			<module name="org.jboss.resteasy.async-http-servlet-30" />
+			<!-- Exclude resteasy logging dependencies -->
+			<module name="org.apache.log4j" />
+			<module name="org.apache.commons.logging"/>
 		</exclusions>
 	</deployment>
 </jboss-deployment-structure>

@@ -1,6 +1,4 @@
 /*
- * Amadeus Confidential Information:
- * Unauthorized use and disclosure strictly forbidden.
  * @1998-2014 - Amadeus s.a.s - All Rights Reserved.
  */
 package com.amadeus.inr.sandbox.v2.conf;
@@ -17,7 +15,7 @@ import javax.ws.rs.ext.Provider;
 
 import org.jboss.resteasy.plugins.providers.jackson.ResteasyJackson2Provider;
 
-import com.amadeus.inr.sandbox.hotel.shopping.v2.conf.serializer.BigDecimalSerializer;
+import com.amadeus.inr.sandbox.v2.conf.serializer.BigDecimalSerializer;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;

@@ -3,18 +3,13 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.amadeus.inr</groupId>
-	<artifactId>travel-innovation-sandbox</artifactId>
+	<artifactId>jboss-test-application</artifactId>
 	<packaging>war</packaging>
 	<version>1.2-SNAPSHOT</version>
-	<name>travel-innovation-sandbox</name>
-	<url>http://sandbox.amadeus.com</url>
+	<name>jboss-test-application</name>
+	<url>https://community.jboss.org/thread/241502</url>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.amadeus.inr</groupId>
-			<artifactId>sandbox-hotel-shopping</artifactId>
-			<version>1.2-SNAPSHOT</version>
-		</dependency>
 		<!-- JAX-RS & RestEasy -->
 		<dependency>
 			<groupId>org.jboss.resteasy</groupId>
@@ -32,25 +27,14 @@
 			<version>3.0.6.Final</version>
 		</dependency>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
 			<version>[2.5,)</version>
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.amadeus.inr</groupId>
-			<artifactId>data-validation-toolbox</artifactId>
-			<version>0.1</version>
-		</dependency>
 	</dependencies>
 	<build>
-		<finalName>travel-innovation-sandbox</finalName>
+		<finalName>jboss-test-application</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>

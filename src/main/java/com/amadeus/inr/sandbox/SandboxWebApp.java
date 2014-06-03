@@ -1,6 +1,4 @@
 /*
- * Amadeus Confidential Information:
- * Unauthorized use and disclosure strictly forbidden.
  * @1998-2014 - Amadeus s.a.s - All Rights Reserved.
  */
 package com.amadeus.inr.sandbox;

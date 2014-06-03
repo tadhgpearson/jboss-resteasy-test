@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
 	version="2.4">
 
-	<display-name>Travel Innovation Sandbox</display-name>
+	<display-name>JBoss Test App</display-name>
 		
 	<listener>
 		<listener-class>
@@ -29,7 +29,7 @@
 
 	<context-param>
 		<param-name>resteasy.providers</param-name><!--  Order is important here -->
-		<param-value>com.amadeus.inr.sandbox.v2.conf.JSONProvider, com.amadeus.inr.sandbox.v2.conf.ValidationExceptionMapper, com.amadeus.inr.sandbox.v2.conf.GeneralExceptionMapper</param-value>
+		<param-value>com.amadeus.inr.sandbox.v2.conf.JSONProvider, com.amadeus.inr.sandbox.v2.conf.GeneralExceptionMapper</param-value>
 	</context-param>
 	
 </web-app>
