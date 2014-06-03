@@ -1,30 +1,12 @@
-Sandbox Application Server
+JBOSS Test Application Server
 =======================
-This is the aggregate application for the Travel Innovation Sandbox. 
-It gathers up all the disparate JARs representing each sandbox interface implementation, and publishes them as a single WAR, including all the dependant JARs
+This is the aggregate application for testing JBoss 7.1 with Resteasy 3
 
 Setting up
 ==========
 To setup the sandbox you need to install Maven 3.0.4 (or some compatible version) and Java 7.
-You will need to install the child project sandbox-hotel-shopping and build it first so that the pre-requisite JARs exist in your repo. 
 
 To build the jar, run
 > mvn install
 
-If for some reason you get an error, it's likely that the default Amadeus settings.xml is causing the import to be ignored. This is evil but easily fixed.
-Find your settings.xml, usually `D:\<myusername>\.m2` and in the mirrorOf line, if you see something like this
-
-> <mirrorOf>*, !jcp.repository.wlm</mirrorOf>
-
-make it something like this
-
-> <mirrorOf>*, !jcp.repository.wlm, !project.local</mirrorOf>
-
-To setup eclipse, import the this folder as a maven project, or run
-> mvn eclipse:eclipse -Dwtpversion=2.0
-
-and then import it as an existing project
-
-Where is everything
-================
 
